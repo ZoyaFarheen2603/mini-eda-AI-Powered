@@ -3,6 +3,16 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
+
+
+import google.generativeai as genai
+
+GEMINI_API_KEY = ""git status
+
+genai.configure(api_key=GEMINI_API_KEY)
+
+model = genai.GenerativeModel("gemini-3.5-flash")
+
 st.set_page_config(page_title="Mini EDA App", layout="wide")
 st.title("📊 Mini AI-Powered EDA Report")
 st.write("Upload a CSV file and explore your dataset.")
