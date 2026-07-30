@@ -7,11 +7,11 @@ import matplotlib.pyplot as plt
 
 import google.generativeai as genai
 
-GEMINI_API_KEY = ""git status
 
-genai.configure(api_key=GEMINI_API_KEY)
 
-model = genai.GenerativeModel("gemini-3.5-flash")
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
+
+model = genai.GenerativeModel("gemini-2.5-flash")
 
 st.set_page_config(page_title="Mini EDA App", layout="wide")
 st.title("📊 Mini AI-Powered EDA Report")
